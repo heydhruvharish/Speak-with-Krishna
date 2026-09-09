@@ -39,22 +39,4 @@ def layout():
     """, unsafe_allow_html=True)
 
 
-    with st.container(border=True):
-
-        st.markdown("""
-        <h1 style="
-            text-align:center;
-            color:white;
-            margin-bottom:5px;
-        ">
-            Create Account
-        </h1>
-
-        <p style="
-            text-align:center;
-            color:#cccccc;
-            margin-bottom:25px;
-        ">
-            Register to continue
-        </p>
-        """, unsafe_allow_html=True)
+   

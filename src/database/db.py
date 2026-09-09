@@ -18,3 +18,16 @@ def register_user(name,username,password):
     supabase.table("users").insert(data).execute()
     
     return True,"Account created successfully"
+
+def user_login(username,password):
+    response=supabase.table("users").select("*").eq("username",username).execute()
+    
+    if response.data:
+        user=response.data[0]
+        if check_pass(password,user["password"]):
+            return user
+    
+    return None
+
+def check_pass(pwd,hashed):
+    return bcrypt.checkpw(pwd.encode(),hashed.encode())

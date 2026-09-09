@@ -5,6 +5,8 @@ def main():
     if "home" not in st.session_state:
         st.session_state["home"]="register"
     
+    if "page" not in st.session_state:
+        st.session_state["page"]="home"
     
     home_screen()
     
