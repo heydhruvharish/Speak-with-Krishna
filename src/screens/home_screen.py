@@ -33,7 +33,8 @@ def register():
         if st.button("Register",icon=":material/passkey:"):
             if not name or not username or not password:
                 st.error("Fill all the fields")
-                return
+                time.sleep(2)
+                st.rerun()
             
             success,msg=register_user(name,username,password)
         
@@ -76,10 +77,10 @@ def login():
         if st.button("Login",icon=":material/passkey:"):
             if not username or not password:
                 st.error("Fill all the fields")
-                return
+                time.sleep(1)
+                st.rerun()
             if check(username,password):
                 st.toast("Login successful",icon="✅")
-                import time
                 time.sleep(1)
                 st.rerun()
             else:
