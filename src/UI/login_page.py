@@ -3,6 +3,10 @@ import streamlit as st
 def layout():
     st.markdown("""
     <style>
+    /* Hide Top Bar of streamlit */    
+        #MainMenu, footer, header {
+                visibility: hidden;
+        }
 
     /* Move main content above the video */
     .stMainBlockContainer {

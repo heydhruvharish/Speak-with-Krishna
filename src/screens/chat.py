@@ -1,8 +1,9 @@
 import streamlit as st 
 from src.llm.llm import get_response
-from langchain_core.messages import HumanMessage
+from src.UI.chat_screen import chat_ui
     
 def chat():
+    chat_ui()
     user_data=st.session_state["data"]
     if "message_history" not in st.session_state:
         st.header(f"Welcome {user_data["name"]}")
@@ -32,7 +33,7 @@ def chat():
             st.text(user_input)
 
         # Get Groq response
-        ai_message = get_response(user_input)
+        ai_message = get_response(user_input,st.session_state["message_history"])
 
         # Store AI response
         st.session_state["message_history"].append({
