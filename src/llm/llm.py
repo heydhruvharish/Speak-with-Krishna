@@ -48,5 +48,7 @@ def get_response(question,msg_history):
         reasoning_effort="medium",
         stream=False
     )
-    
+    #Completion contains many info ID,model,choices,usage 
+    #choices is a list of possible generated responses.
+    #[0] Means give me the first generated response ,in this case ,n=1 therefore only 1 response is generated anyway
     return completion.choices[0].message.content

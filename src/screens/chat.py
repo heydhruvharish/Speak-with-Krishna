@@ -42,10 +42,7 @@ def chat():
         })
 
         # Display AI response
-        with st.chat_message(
-            "assistant",
-            avatar="src/assets/krishna.png"
-        ):
+        with st.chat_message("assistant",avatar="src/assets/krishna.png"):
             st.text(ai_message)
             
     
