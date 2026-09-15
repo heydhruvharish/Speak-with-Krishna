@@ -1,6 +1,7 @@
 import streamlit as st 
 from src.llm.llm import get_response
 from src.UI.chat_screen import chat_ui
+from src.RAG.rag import rag_retriever
     
 def chat():
     chat_ui()
@@ -33,7 +34,8 @@ def chat():
             st.text(user_input)
 
         # Get Groq response
-        ai_message = get_response(user_input,st.session_state["message_history"])
+        with st.spinner("Hmmm muje sochne do.."):
+            ai_message = get_response(user_input,st.session_state["message_history"],rag_retriever)
 
         # Store AI response
         st.session_state["message_history"].append({
