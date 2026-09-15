@@ -57,27 +57,6 @@ When a user asks a question, the question is also converted into an embedding. C
 * **PyMuPDF** — PDF processing
 * **bcrypt** — Password hashing
 
-## Project Structure
-
-```text
-Speak-with-Krishna/
-│
-├── Data/
-│   ├── Bhagvad_gita_As_it_is.pdf
-│   └── vector_store/
-│
-├── src/
-│   ├── UI/
-│   ├── components/
-│   ├── llm/
-│   ├── pipelines/
-│   └── ...
-│
-├── app.py
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
 
 ## RAG Pipeline
 
@@ -111,12 +90,10 @@ Speak with Krishna is an educational and experimental AI project inspired by *Bh
 
 ## Future Improvements
 
-* More precise chapter and verse-level retrieval
-* Improved Sanskrit and Hindi verse extraction using OCR
-* Direct chapter and shloka citations
-* Multilingual support
-* Improved retrieval accuracy
-* Support for additional commentaries and sources
+- Persistent chat history stored in Supabase
+- Improved Sanskrit and Hindi OCR
+- Voice-based interaction
+- Conversation titles and chat search
 
 ## Author
 
