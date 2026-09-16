@@ -1,6 +1,7 @@
 # Speak with Krishna
 
-**Speak with Krishna** is an AI-powered conversational chatbot inspired by the teachings and wisdom of Lord Krishna from ***Bhagavad Gita As It Is***.
+**Speak with Krishna** is an AI-powered conversational chatbot inspired by the teachings and wisdom of Lord Krishna from ***Bhagavad Gita As It Is*** by A.C. Bhaktivedanta Swami Srila Prabhupada.
+.
 
 The application uses **Retrieval-Augmented Generation (RAG)** to retrieve relevant passages from *Bhagavad Gita As It Is* and provide context-aware responses based on its teachings.
 
